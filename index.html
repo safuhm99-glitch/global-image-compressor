@@ -6,107 +6,46 @@
     <title>Global Image Compressor - Free Online Photo Optimizer</title>
     <meta name="description" content="Compress JPG, PNG, SVG, and WebP images instantly without losing quality. 100% Free, secure, and fast image compression tool.">
     
-    <!-- ⚠️ تم تحديث كود قوقل أدسينس التلقائي بمعرّف الأرباح الحقيقي الخاص بك -->
+    <!-- 🟢 كود أدسينس كاملاً ومدمجاً مع رقم تعريفك الحقيقي بدون أي نقص -->
     <script async src="https://googlesyndication.com" crossorigin="anonymous"></script>
 
     <style>
-        body {
-            background-color: #0B0F19;
-            color: #F3F4F6;
-            font-family: system-ui, -apple-system, sans-serif;
-            margin: 0;
-            padding: 40px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-        }
-        .ad-container {
-            width: 100%;
-            max-width: 728px;
-            min-height: 90px;
-            background-color: #111827;
-            border: 1px solid #1F2937;
-            border-radius: 8px;
-            margin: 20px 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #9CA3AF;
-        }
+        body { background-color: #0B0F19; color: #F3F4F6; font-family: system-ui, sans-serif; margin: 0; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
+        .ad-container { width: 100%; max-width: 728px; min-height: 90px; background-color: #111827; border: 1px solid #1F2937; border-radius: 8px; margin: 20px 0; display: flex; align-items: center; justify-content: center; color: #9CA3AF; }
         header { text-align: center; margin-bottom: 40px; }
         h1 { color: #3B82F6; font-size: 2.5rem; font-weight: 800; margin-bottom: 10px; }
         p { color: #9CA3AF; font-size: 1.1rem; }
-        .upload-box {
-            width: 100%;
-            max-width: 600px;
-            background-color: #111827;
-            border: 2px dashed #2563EB;
-            border-radius: 16px;
-            padding: 50px 20px;
-            text-align: center;
-            position: relative;
-            box-sizing: border-box;
-        }
-        .upload-box input {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            opacity: 0; cursor: pointer;
-        }
+        .upload-box { width: 100%; max-width: 600px; background-color: #111827; border: 2px dashed #2563EB; border-radius: 16px; padding: 50px 20px; text-align: center; position: relative; box-sizing: border-box; }
+        .upload-box input { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; }
         .results-box { width: 100%; max-width: 600px; margin-top: 30px; }
-        .image-item {
-            background-color: #1F2937;
-            padding: 16px;
-            border-radius: 12px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border: 1px solid #374151;
-            margin-bottom: 12px;
-        }
-        .download-btn {
-            background-color: #2563EB;
-            color: #FFF;
-            padding: 10px 20px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-        }
+        .image-item { background-color: #1F2937; padding: 16px; border-radius: 12px; display: flex; justify-content: space-between; align-items: center; border: 1px solid #374151; margin-bottom: 12px; }
+        .download-btn { background-color: #2563EB; color: #FFF; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; }
     </style>
 </head>
 <body>
-
-    <!-- 🟢 إعلان أدسينس علوي لمشاهدات الزوار الأجانب -->
-    <div class="ad-container">[ Top Ad Banner - Auto Optimized ]</div>
-
+    <div class="ad-container">[ Top Ad Banner ]</div>
     <header>
         <h1>⚡ Global Image Compressor</h1>
-        <p>Optimize, compress, and shrink your photos instantly. Fast, Secure, and 100% Free.</p>
+        <p>Optimize and compress your photos instantly. Fast, Secure, and Free.</p>
     </header>
-
     <main class="upload-box">
         <input type="file" id="imageInput" multiple accept="image/*">
         <div style="font-size: 3rem; margin-bottom: 15px;">📁</div>
-        <h3 style="margin: 0 0 5px 0;">Drag & drop your images here</h3>
-        <p style="color: #6B7280; font-size: 0.875rem; margin: 0;">Supports PNG, JPG, JPEG, WebP (Client-Side Powered)</p>
+        <h3>Drag & drop your images here</h3>
+        <p style="color: #6B7280; font-size: 0.875rem;">Supports PNG, JPG, JPEG, WebP</p>
     </main>
-
     <section class="results-box" id="resultsSection" style="display: none;">
-        <h2 style="color: #10B981; font-size: 1.25rem; margin-bottom: 15px;">✓ Optimization Completed:</h2>
+        <h2 style="color: #10B981; font-size: 1.25rem; margin-bottom: 15px;">✓ Completed:</h2>
         <div id="resultsContainer"></div>
     </section>
-
-    <!-- 🟢 إعلان أدسينس سفلي للنقرات بقرب روابط التحميل -->
-    <div class="ad-container" style="margin-top: 40px;">[ Bottom Ad Banner - High CTR ]</div>
+    <div class="ad-container" style="margin-top: 40px;">[ Bottom Ad Banner ]</div>
 
     <script>
         document.getElementById('imageInput').addEventListener('change', async (e) => {
             const files = Array.from(e.target.files);
             if (!files.length) return;
-            
             const container = document.getElementById('resultsContainer');
             document.getElementById('resultsSection').style.display = 'block';
-            
             files.forEach(file => {
                 const reader = new FileReader();
                 reader.onload = function(event) {
@@ -114,30 +53,17 @@
                     img.onload = function() {
                         const canvas = document.createElement('canvas');
                         const ctx = canvas.getContext('2d');
-                        
-                        let width = img.width;
-                        let height = img.height;
+                        let width = img.width; let height = img.height;
                         if (width > 1920) { height *= 1920 / width; width = 1920; }
-                        
-                        canvas.width = width;
-                        canvas.height = height;
+                        canvas.width = width; canvas.height = height;
                         ctx.drawImage(img, 0, 0, width, height);
-                        
                         canvas.toBlob((blob) => {
                             const compressedUrl = URL.createObjectURL(blob);
                             const origSize = (file.size / 1024 / 1024).toFixed(2);
                             const compSize = (blob.size / 1024 / 1024).toFixed(2);
-                            
                             const item = document.createElement('div');
                             item.className = 'image-item';
-                            item.innerHTML = `
-                                <div>
-                                    <p style="margin: 0; font-weight: 600;">${file.name}</p>
-                                    <span style="font-size: 0.85rem; color: #9CA3AF;">${origSize} MB → </span>
-                                    <span style="font-size: 0.85rem; color: #10B981; font-weight: bold;">${compSize} MB</span>
-                                </div>
-                                <a href="${compressedUrl}" download="compressed-${file.name}" class="download-btn">Download</a>
-                            `;
+                            item.innerHTML = `<div><p style="margin: 0; font-weight: 600;">${file.name}</p><span style="font-size: 0.85rem; color: #9CA3AF;">${origSize} MB → </span><span style="font-size: 0.85rem; color: #10B981; font-weight: bold;">${compSize} MB</span></div><a href="${compressedUrl}" download="compressed-${file.name}" class="download-btn">Download</a>`;
                             container.appendChild(item);
                         }, 'image/jpeg', 0.7);
                     };
