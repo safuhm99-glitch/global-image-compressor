@@ -6,8 +6,11 @@
     <title>Global Image Compressor - Free Online Photo Optimizer</title>
     <meta name="description" content="Compress JPG, PNG, SVG, and WebP images instantly without losing quality. 100% Free, secure, and fast image compression tool.">
     
-    <!-- 🟢 كود أدسينس كاملاً ومدمجاً مع رقم تعريفك الحقيقي لزيادة أرباح النقرات والمشاهدات -->
+    <!-- 🟢 كود أدسينس التلقائي التفعيلي المحدث برقم حسابك الحقيقي لزيادة أرباح النقرات -->
     <script async src="https://googlesyndication.com" crossorigin="anonymous"></script>
+
+    <!-- 🌐 كود العلامة الوصفية (Meta Tag) لإثبات ملكية موقعك في قوقل أدسينس فوراً وبدون أخطاء -->
+    <meta name="google-adsense-account" content="ca-pub-8540424347567287">
 
     <style>
         body { background-color: #0B0F19; color: #F3F4F6; font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
@@ -27,7 +30,7 @@
 </head>
 <body>
 
-    <!-- 🌐 أزرار تغيير اللغة اليدوية لزيادة السيو العالمي -->
+    <!-- 🌐 أزرار تغيير اللغة اليدوية والتلقائية لزيادة السيو العالمي وجلب ترافيك مرتفع العائد -->
     <div class="lang-switcher">
         <button class="lang-btn active" onclick="switchLang('en')">English</button>
         <button class="lang-btn" onclick="switchLang('es')">Español</button>
@@ -35,7 +38,7 @@
         <button class="lang-btn" onclick="switchLang('ar')">العربية</button>
     </div>
 
-    <!-- 🟢 إعلان أدسينس علوي مستهدف لزيادة مشاهدات وأرباح الزوار الأجانب -->
+    <!-- 🟢 إعلان أدسينس علوي مستهدف لزيادة الأرباح والمشاهدات الدولية -->
     <div class="ad-container">[ Google AdSense - Top Banner ]</div>
 
     <header>
@@ -55,11 +58,10 @@
         <div id="resultsContainer"></div>
     </section>
 
-    <!-- 🟢 إعلان أدسينس سفلي عالي النقرات (موضوع بذكاء بجانب أزرار التحميل) -->
+    <!-- 🟢 إعلان أدسينس سفلي عالي النقرات موضوع بذكاء بجوار أزرار التحميل -->
     <div class="ad-container" style="margin-top: 40px;">[ Google AdSense - Bottom Banner - High CTR ]</div>
 
     <script>
-        // قاموس اللغات العالمي لضمان تصدر السيو في مختلف الدول المرتفعة العائد
         const translations = {
             en: { title: "⚡ Global Image Compressor", desc: "Optimize, compress, and shrink your photos instantly. Fast, Secure, and 100% Free.", drop: "Drag & drop your images here", support: "Supports PNG, JPG, JPEG, WebP (Client-Side Powered)", success: "✓ Optimization Completed:", download: "Download" },
             es: { title: "⚡ Compresor de Imágenes Global", desc: "Optimiza y comprime tus fotos al instante. Rápido, seguro y 100% gratis.", drop: "Arrastra y suelta tus imágenes aquí", support: "Soporta PNG, JPG, JPEG, WebP", success: "✓ Optimización Completada:", download: "Descargar" },
@@ -69,7 +71,6 @@
 
         let currentLang = 'en';
 
-        // دالة تغيير اللغات التلقائية واليدوية
         function switchLang(lang) {
             currentLang = lang;
             document.getElementById('mainTitle').innerText = translations[lang].title;
@@ -79,13 +80,11 @@
             document.getElementById('successText').innerText = translations[lang].success;
             
             document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
+            if(event && event.target) event.target.classList.add('active');
             
-            // تغيير اتجاه النص إذا كانت اللغة عربية
             document.body.style.direction = lang === 'ar' ? 'rtl' : 'ltr';
         }
 
-        // التعرف التلقائي على لغة متصفح الزائر الأجنبي عند الدخول للموقع
         const userLang = navigator.language || navigator.userLanguage;
         if (userLang.startsWith('es')) switchLang('es');
         else if (userLang.startsWith('fr')) switchLang('fr');
